@@ -1,1 +1,78 @@
-This is a test text file for GitHub.
+https://github.com/larate/practical-sqa/wiki
+http://www.data.portnov.com/larisa/
+The video is on Youtube  
+https://www.youtube.com/watch?v=xuB1Id2Wxak
+https://www.edureka.co/blog/install-git/
+Read  GitHub help 
+Bootcamp / Set Up Git 
+https://help.github.com/articles/set-up-git/
+
+First, you need to install Git on your machine https://git-scm.com
+Install Git On Windows
+Step 1: 
+To download the latest version of Git,
+Download Git for Windows  https://git-scm.com/download/win
+ Select Launch Git Bash and click on Finish.
+Step 2:
+Let us proceed with configuring Git with your username and email. In order to do that, type the following commands in your Git Bash:
+git config - - global user.name "<your name>"
+
+git config - - global user.email "<your email>"
+
+It is important to configure your Git because any commits that you make are associated with your configuration details.
+If you want to view all your configuration details, use the command below:
+
+git config --list
+Now to check the version of Git installed  we will use the command:
+git --version
+
+Step 3:
+git clone
+Create a folder on your Desktop "repos"
+C:\Users\Teacher\Desktop\repos>git clone https://github.com/larate/practical-sqa.git
+Cloning into 'practical-sqa'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+C:\Users\Teacher\Desktop\repos>ls
+practical-sqa
+
+C:\Users\Teacher\Desktop\repos>cd practical-sqa
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>ls
+README.md
+
+Step 4: 
+Add
+This command updates the index using the current content found in the working tree and then prepares the content in the staging area for the next commit.
+Thus, after making changes to the working tree, and before running the commit command, you must use the add command to add any new or modified files to the index. For that, use the commands below:
+git add <directory>
+or
+git add <file>
+or 
+git add .
+
+Step 5:
+C:\Users\Teacher\Desktop\repos\practical-sqa>git commit -m "updated readme file for better description"
+[master 26e459d] updated readme file for better description
+C:\Users\Teacher\Desktop\repos\practical-sqa>git log
+ git --help
+C:\Users\Teacher\Desktop\repos\practical-sqa>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/larate/practical-sqa.git
+
+
+
+
+
