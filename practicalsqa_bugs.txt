@@ -1,0 +1,37 @@
+Tasks:
+1. Inventory of courses and pages and webinars
+2. One page summary to be given to new students
+3. Test Design
+4. Test cases
+
+
+TEST DESIGN
+1. Home
+2. Brainteasers 
+3. Forums
+4. Classes
+5.Class materials
+	5.1 Selenium Box Materials
+	5.2 Black Box Materials
+		5.2.1 Selenium Class Materials
+		5.2.2 Selenium Video
+6. Contact Me
+	Case 1. Correct "Skype" address is provided
+	Case 2. Correct email info is provided
+	Case 3. Sending a request using the "Leave a Reply" form
+
+
+
+Bug Reports
+#1. Header/"Class materials: Replace  Black Box materials" with "Manual Testing"
+#2. Header/"Class materials: Replace  Selenium materials" with "Selenium"
+#3. Header: Replace "Contact me" with "Contact Us"
+
+
+
+
+
+==========THREE AREAS FOR CONSISTENCY CHECK on a page===================
+- link title = Black box testing videos
+- target page URL = /mobile-class-video/
+- target page header = Mobile Testing (Video)
