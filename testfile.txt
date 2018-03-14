@@ -73,7 +73,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/larate/practical-sqa.git
 
 Step 6:
-Do not push to the got without pull new changes from the origin 
+Do not push to the git without pull new changes from the origin 
 git pull origin master
 remote: Counting objects: 6, done.
 remote: Compressing objects: 100% (5/5), done.
@@ -106,6 +106,16 @@ C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
   origin/first_branch
   origin/master
 git checkout remote_branch
+
+Step 7:
+git push origin first_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch
+* first_branch
+  master
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git fetch origin
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -v -a
 
 Merging
 Merging is the way to combine the work of different branches together. This will allow us to branch off, develop a new feature, and then combine it back in.
