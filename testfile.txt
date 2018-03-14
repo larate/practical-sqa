@@ -72,6 +72,45 @@ Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/larate/practical-sqa.git
 
+Step 6:
+Do not push to the got without pull new changes from the origin 
+git pull origin master
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+C:\Users\Teacher\Desktop\repos\practical-sqa>git log
+see the branch with git branch -r.
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+
+git fetch origin
+
+This will fetch all of the remote branches for you. You can see the branches available for checkout with:
+
+git branch -v -a
+With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+git checkout -b test origin/test
+
+git branch first_branch origin/first_branch
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+ git checkout -b remote_branch origin/remote_branch
+$ git fetch origin
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+git checkout remote_branch
+Merging
+Merging is the way to combine the work of different branches together. This will allow us to branch off, develop a new feature, and then combine it back in.
+git merge <branch_name>
+It is important to know that the branch name in the above command should be the branch you want to merge into the branch you are currently checking out. So, make sure that you are checked out in the destination branch.
+
+
+
 
 
 
