@@ -11,7 +11,7 @@ TEST DESIGN
 3. Forums
 4. Classes
 5.Class materials
-	5.1 Selenium Box Materials
+	5.1 Selenium Materials
 	5.2 Black Box Materials
 		5.2.1 Selenium Class Materials
 		5.2.2 Selenium Video
