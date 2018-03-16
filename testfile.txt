@@ -88,15 +88,23 @@ C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
 
 git fetch origin
 This will fetch all of the remote branches for you. You can see the branches available for checkout with:
-~/repos/practical-sqa --> git status
-From https://github.com/larate/practical-sqa
- * [new branch]      first_branch -> origin/first_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git fetch origin
 
-	git checkout first_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -v -a
+
+~/repos/practical-sqa --> git status
+
+Step 7:
+to create a new branch 
+>git branch test_feature
 
 git branch -v -a
-With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
 
+git checkout: means to switch to that branch
+ 
+git checkout test_feature
+ 
+With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
 git branch first_branch origin/first_branch
 
 C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
@@ -107,19 +115,39 @@ C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
   origin/master
 git checkout remote_branch
 
-Step 7:
+Step 8:
+after all changes has been made you are ready push you changes to the GitHub
+
 git push origin first_branch
-C:\Users\Teacher\Desktop\repos\practical-sqa>git branch
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
 * first_branch
   master
 
-C:\Users\Teacher\Desktop\repos\practical-sqa>git fetch origin
+Step 9:
 
-C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -v -a
+On GitHub, navigate to the main page of the repository.	
+
+In the "Branch" menu, choose the branch that contains your commits.
+To the right of the Branch menu, click New pull request.
+
+Use the base branch dropdown menu to select the branch you'd like to merge your changes into,
+then use the compare branch drop-down menu to choose the topic branch you made your changes in.
+Type a title and description for your pull request. 
+ Click Create pull request
+After your pull request has been reviewed, it can be merged into the repository.
+
+
+<https://help.github.com/articles/creating-a-pull-request/> 
+
+
+------------------------------------------------------------------------------------
 
 Merging
+
 Merging is the way to combine the work of different branches together. This will allow us to branch off, develop a new feature, and then combine it back in.
 git merge <branch_name>
+Merge all of the commits into the base branch by clicking Merge pull request. If the Merge pull request option is not shown, then click the merge drop down menu and select Create a merge commit.
 It is important to know that the branch name in the above command should be the branch you want to merge into the branch you are currently checking out. So, make sure that you are checked out in the destination branch.
 Common workflow 
 ----------------------------------------------------------------------
@@ -137,10 +165,14 @@ Git add
 Git commit -m ""
 Git push -u origin my_feature
 Git branch -a 
+
 	1. First we are  switching to a master brunch  
 Git checkout master
 	2. We are pulling master from remote 
-Git pull origin master  
+
+Deleting a branch 
+// locally ((if you know what you are doing!) git branch -d localBranchName // and then if you need to... // on remote
+ git pus origin :remoteBranchNameit pull origin master  
 	3. We are merging our feature
 	4. git branch --merged 
 	C:\Users\Teacher\Desktop\repos\practical-sqa>git branch --merged
