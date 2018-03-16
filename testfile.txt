@@ -72,6 +72,90 @@ Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/larate/practical-sqa.git
 
+Step 6:
+Do not push to the git without pull new changes from the origin 
+git pull origin master
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git log
+see the branch with git branch -r.
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+
+git fetch origin
+This will fetch all of the remote branches for you. You can see the branches available for checkout with:
+~/repos/practical-sqa --> git status
+From https://github.com/larate/practical-sqa
+ * [new branch]      first_branch -> origin/first_branch
+
+	git checkout first_branch
+
+git branch -v -a
+With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+
+git branch first_branch origin/first_branch
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+ git checkout -b remote_branch origin/remote_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+git checkout remote_branch
+
+Step 7:
+git push origin first_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch
+* first_branch
+  master
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git fetch origin
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -v -a
+
+Merging
+Merging is the way to combine the work of different branches together. This will allow us to branch off, develop a new feature, and then combine it back in.
+git merge <branch_name>
+It is important to know that the branch name in the above command should be the branch you want to merge into the branch you are currently checking out. So, make sure that you are checked out in the destination branch.
+Common workflow 
+----------------------------------------------------------------------
+Git branch my_feature
+Git checkout my_feature
+Git branch -a 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
+* first_branch
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/first_branch
+  remotes/origin/master
+
+Git add
+Git commit -m ""
+Git push -u origin my_feature
+Git branch -a 
+	1. First we are  switching to a master brunch  
+Git checkout master
+	2. We are pulling master from remote 
+Git pull origin master  
+	3. We are merging our feature
+	4. git branch --merged 
+	C:\Users\Teacher\Desktop\repos\practical-sqa>git branch --merged
+	* first_branch
+	  master
+	
+	5. Git merge my_feature
+	6. Git push origin master
+	7. Git branch -d my_feature 
+	8. Git branch -a 
+	9. Git push origin --delete my_feature
+	10. Git branch -a
+
+
+
 
 
 
