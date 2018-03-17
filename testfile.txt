@@ -185,6 +185,46 @@ Deleting a branch
 	8. Git branch -a 
 	9. Git push origin --delete my_feature
 	10. Git branch -a
+------------------------------------------------------------------------
+1. to list all files
+ 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git ls-files
+README.md
+artem_test.txt
+file
+new_m.txt
+practicalsqa_bugs.txt
+testfile.txt
+text.txt
+2. to see all remote branchs 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
+* larisa_deleting_files
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Nikolay
+  remotes/origin/artem_test
+  remotes/origin/drozhzhi
+  remotes/origin/master
+  remotes/origin/revert-16-drozhzhi
+  remotes/origin/revert-17-revert-16-drozhzhi
+  remotes/origin/sergey_test
+  remotes/origin/vlad_test_2
+
+
+3. to see all remote branches and files
+C:\Users\Teacher\Desktop\repos\practical-sqa>git ls-tree --full-tree -r HEAD
+
+100644 blob 046e58c96c904e72549fd8d2e95b01ffef540a7b    README.md
+100644 blob 9c8b35a089779b34a67b5093d8cdba7a7f250fca    artem_test.txt
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    file
+100644 blob cee50c8fcc68312571434d3a3bf98352ea8f52b0    new_m.txt
+100644 blob d1e32ecf272fcaa476026c4fd759e0522c0b0ca2    practicalsqa_bugs.txt
+100644 blob 53a5e0ddf9a85d3020a3d57dcac8c6c9ec5b5e0a    testfile.txt
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    text.txt
+
+To remove extra files 
+rm new_m.txt
+
 
 
 
