@@ -1,5 +1,6 @@
-@wip
+
 Feature: Contactme
+  @acceptance
   Scenario: Leaving a Comment
     Given I navigate to Contact Me page
     When I verify the Contact Me page loaded
