@@ -8,3 +8,4 @@ gem 'pry',                        '~> 0.10.3'
 gem 'selenium-webdriver',         '~> 3.0.5'
 gem 'parallel_tests',             '~> 1.9.0'
 gem 'site_prism',                 '~> 2.8'
+
