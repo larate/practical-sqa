@@ -17,9 +17,9 @@ Before do
 
   # puts Launchy::Application.new.host_os_family # => :windows, :darwin, :nix, or :cygwin
   if Launchy::Application.new.host_os_family.to_s.include? ":Darwin"
-    driver_path = driver_path_darwin
+    driver_path = driver_path_darwin_mozilla
   elsif Launchy::Application.new.host_os_family.to_s.include? ":Windows"
-    driver_path = driver_path_window
+    driver_path = driver_path_darwin_chrome
   end
 
 
