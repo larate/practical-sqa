@@ -1,6 +1,6 @@
 Feature: Verify that correct answer displayed on the "Interview questions for black box testing – page 2"
 @wip
-  Scenario:
+  Scenario: Verify interview question #1
   Given  User on the Practicalsqa Home page
   Then Click on the "Blog" link under the imege
   Then  Navigate to the page "Interview questions for black box testing – page 2"
