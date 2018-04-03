@@ -48,14 +48,14 @@ Make sure you have `Ruby <https://www.ruby-lang.org/en/>`_ installed on your sys
 GeckoDriver
 ----------------
 ~~~~~~~~~~~~
-FireFox - WebDriver for FireFox
-~~~~~~~~~~~~
-Need download driver from `GeckoDriver <https://github.com/mozilla/geckodriver/releases>`_
-
-~~~~~~~~~~~~
-ChromeDriver - WebDriver for Chrome [Not Implement yet]
+ChromeDriver - WebDriver for Chrome
 ~~~~~~~~~~~~
 Need download chromedriver from `GeckoDriver <https://sites.google.com/a/chromium.org/chromedriver/downloads>`_
+
+~~~~~~~~~~~~
+FireFox - WebDriver for FireFox [Not Implement yet]
+~~~~~~~~~~~~
+Need download driver from `GeckoDriver <https://github.com/mozilla/geckodriver/releases>`_
 
 
 =============
@@ -65,31 +65,15 @@ To run the framework using basic options and their syntax:
 
 ``cucumber``
 
-----------------
-Browser
-----------------
-To run the framework in a particular browser, to need to specify the name of the browser as a parameter of the option of [-DdriverType]
+OR
 
-~~~~~~~~~~~~
-Firefox
-~~~~~~~~~~~~
-To run in Firefox use -DdriverType=FF, below:
+``cucumber -t @F1``
 
-``mvn clean site -DdriverType=[FF/ff/FIREFOX/FireFox/firefox/FOX/Fox/fox]``
+``cucumber -t @TC1.1``
 
-~~~~~~~~~~~~
-Chrome - [Not Implement yet]
-~~~~~~~~~~~~
-To run in Chrome use -DdriverType=CHROME, below:
+``cucumber -t @F2``
 
-``mvn clean site -DdriverType=[CH/ch/CHROME/chrome/GOOGLE/google]``
-
-~~~~~~~~~~~~
-Default
-~~~~~~~~~~~~
-If you don't specify this parameter, default option -DdriverType = ff
-
-``mvn clean site -DdriverType=ff``
+``cucumber -t @TC2.1``
 
 
 =============

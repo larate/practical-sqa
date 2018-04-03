@@ -3,7 +3,6 @@
 # local variable
 driver_path_darwin_mozilla = "/Users/admin/Documents/DevS-iOS/tools/selenium/geckodriver/mozilla/geckodriver-v0.20/geckodriver"
 driver_path_darwin_chrome = "/Users/admin/Documents/DevS-iOS/tools/selenium/geckodriver/chrome/chromedriver-v2.37/chromedriver"
-driver_path_window = "/Users/admin/Documents/DevS-iOS/tools/selenium/geckodriver/mozilla/geckodriver-v0.20/geckodriver.exe"
 url = "http://www.practicalsqa.net/"
 
 # instance variable
@@ -25,7 +24,7 @@ Before do
 
 
   # $browser = Selenium::WebDriver.for :firefox
-  @browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
+  @browser = Selenium::WebDriver.for :chrome, driver_path: driver_path_darwin_chrome
   @browser.manage.window.maximize
   @browser.manage.timeouts.implicit_wait = 10
   @browser.manage.timeouts.page_load =10

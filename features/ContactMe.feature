@@ -1,6 +1,7 @@
-@wip1
+@F1
 Feature: Contactme
 
+  @TC1.1
   Scenario: Leaving a Comment
     Given I navigate to Contact Me page
     When I verify the Contact Me page loaded
@@ -11,7 +12,7 @@ Feature: Contactme
     Then I check subscribe checkbox
     And I click on Post Comment button
 
-@run1
+  @TC1.2
   Scenario: TC1 Verify links for Lessons are presents in Begginnig Selenium Classes from Home page
     Given user is on the practicalsqa.net homepage
     And click on the picture Beginning Selenium Classes

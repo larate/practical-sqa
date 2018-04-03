@@ -1,7 +1,7 @@
-@F01
+@F2
 Feature: Verify that correct answer displayed on the Interview questions for black box testing - page 2
 
-  @TC01
+  @TC2.1
   #Scenario:
   Scenario Outline:
     Given User on the PracticalSQA Home page
