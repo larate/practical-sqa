@@ -1,7 +1,9 @@
 
+
 Given(/^I navigate to Contact Me page$/) do
   url = "http://www.practicalsqa.net/contact-me/"
   @browser.navigate.to url
+
   puts "WebDriver has been created"
 end
 
@@ -20,19 +22,25 @@ And(/^I input my name "([^"]*)"$/) do |name|
 
 end
 
+
 Then(/^I input my email address "([^"]*)"$/) do |email|
   @browser.find_element(id: "email").send_keys(email)
+
 end
 
 And(/^I input my web site url "([^"]*)"$/) do |my_url|
   @browser.find_element(id: "url").send_keys(my_url)
+
 end
 
 Then(/^I check subscribe checkbox$/) do
   @browser.find_element(id: "subscribe_blog").click
+
 end
 
 And(/^I click on Post Comment button$/) do
+  button =  @browser.find_element(id: 'submit')
+  #button.click
 
  sleep 2
 end

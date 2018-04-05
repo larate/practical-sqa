@@ -1,5 +1,6 @@
 require "selenium-webdriver"
 require "rspec"
+
  Before do
    driver_path =  File.join(File.dirname(__FILE__), "..", "..", "drivers","chromedriver.exe")
    puts  driver_path
@@ -9,6 +10,7 @@ require "rspec"
 #   $base_url = "practicalsqa.net"
 #   @browser.get "http://www.#{$base_url}"
  end
+
 
 After do
   @browser.quit
