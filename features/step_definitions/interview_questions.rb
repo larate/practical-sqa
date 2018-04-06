@@ -25,6 +25,8 @@ end
 When(/^Click on the question "([^"]*)"$/) do |why_qa|
   puts why_qa
  element =@browser.find_element(xpath: "//dl[@class = 'accordion']/dt[contains(text(), 'Why do you want to be a QA engineer? Why QA?')]")
+ # expect(element).to include(why_qa)
+
 end
 
 
@@ -32,4 +34,5 @@ end
 
 And(/^Answer should be "([^"]*)"$/) do |arg|
   element = @browser.find_element(xpath: "//dl[@class = 'accordion']/dt[contains(text(), 'Why do you want to be a QA engineer? Why QA?')]/following-sibling::dd/p")[1]
+
 end
