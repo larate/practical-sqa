@@ -1,0 +1,2 @@
+brain_test: --format html --out brainteasers.html --format pretty --tags  @brain
+contactme_test: --format html --out contactme.html --format pretty --tags  @acceptance

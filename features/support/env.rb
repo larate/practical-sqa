@@ -1,6 +1,7 @@
 require "selenium-webdriver"
 require "rspec"
 driver_path =  File.join(File.dirname(__FILE__), "..", "..", "drivers","chromedriver.exe")
+# driver_path = "C:\Users\student\Desktop\repos\practical-sqa\drivers\chromedriver.exe"
 puts  driver_path
  Before do
    @browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
