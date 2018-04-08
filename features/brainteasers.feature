@@ -12,5 +12,5 @@ Feature: Brainteasers testing
       |Beginning Conditionals| Beginning Brainteaser — Conditionals |
       |Beginning Conditionals #2|Beginning Brainteaser — Conditionals p. 2 |
       |Beginning Conditionals #3  | Beginning Brainteaser — Conditionals p. 3 |
-      |Find number of patients| Find number of patients |
+      |Find number of patients| Beginning brainteaser – Find number of patients admitted to Good Health Clinic |
 
