@@ -2,7 +2,7 @@
 Given(/^I navigate to Contact Me page$/) do
   url = "http://www.practicalsqa.net/contact-me/"
   @browser.navigate.to url
-  puts "WebDriver has been created"
+  # puts "WebDriver has been created"
 end
 
 When(/^I verify the Contact Me page loaded$/) do
@@ -52,7 +52,7 @@ Then(/^redirected to http:\/\/www\.practicalsqa\.net\/beginning\-selenium\-class
   actual_head=@browser.find_element(xpath:"//h1[@class='entry-title']").text
   expected_head = "Beginning Selenium Classes"
   raise "Actual is #{actual_head}, but expected: #{expected_head}" unless expected_head==actual_head
-  puts actual_head
+  # puts actual_head
 end
 
 Then(/^user is able to see list of twelve links for Lessons:$/) do |table|
@@ -68,5 +68,3 @@ Then(/^user is able to see list of twelve links for Lessons:$/) do |table|
     raise "Actual: #{actual}, but expected: #{expected}" unless actual==expected
   end
 end
-
-

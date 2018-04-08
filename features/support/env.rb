@@ -1,4 +1,5 @@
 require "selenium-webdriver"
 require "rspec"
 
-require 'launchy'
+# OS = Selenium::WebDriver::Platform.os.to_s
+# require 'launchy'

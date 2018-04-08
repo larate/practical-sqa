@@ -61,27 +61,65 @@ Need download driver from `GeckoDriver <https://github.com/mozilla/geckodriver/r
 =============
 Run
 =============
-To run the framework using basic options and their syntax:
-
+----------------
+To run the framework:
+----------------
 ``cucumber``
 
-OR
-
+----------------
+To run the framework with tag:
+----------------
+~~~~~~~~~~~~
+To run the framework with tag - 'Feature':
+~~~~~~~~~~~~
 ``cucumber -t @F1``
+or
+``cucumber -t @ContactMe``
 
-``cucumber -t @TC1.1``
+~~~~~~~~~~~~
+To run the framework with tag - 'Scenario':
+~~~~~~~~~~~~
+``cucumber -t @SC1.1``
+    .. image:: https://github.com/larate/practical-sqa/blob/petrTest1/screenshot/README/run_t.png
+        :alt: To run the framework with tag:
+        :width: 30%
+        :align: center
 
-``cucumber -t @F2``
+----------------
+To run the framework with profile:
+----------------
+~~~~~~~~~~~~
+To run the framework with profile - 'Feature':
+~~~~~~~~~~~~
+``cucumber -p f1``
+or
+``cucumber -p contactme``
 
-``cucumber -t @TC2.1``
-
-
-=============
-OPEN REPORT
-=============
-    .. image:: https://github.com/larate/practical-sqa/blob/petrTest1/screenshot/README/report.png
-        :alt: Practical SQA
+~~~~~~~~~~~~
+To run the framework with profile - 'Scenario':
+~~~~~~~~~~~~
+``cucumber -p sc1.1``
+    .. image:: https://github.com/larate/practical-sqa/blob/petrTest1/screenshot/README/run_p.png
+        :alt: To run the framework with profile
         :width: 30%
         :align: center
 
 
+=============
+REPORT
+=============
+----------------
+Open report
+----------------
+    .. image:: https://github.com/larate/practical-sqa/blob/petrTest1/screenshot/README/open.png
+        :alt: Practical SQA - Open report
+        :width: 30%
+        :align: center
+
+----------------
+Example
+----------------
+    .. image:: https://github.com/larate/practical-sqa/blob/petrTest1/screenshot/README/report_full.png
+        :alt: Practical SQA - Example
+        :width: 30%
+        :align: center
