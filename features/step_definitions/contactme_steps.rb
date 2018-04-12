@@ -1,10 +1,8 @@
 
-
 Given(/^I navigate to Contact Me page$/) do
   url = "http://www.practicalsqa.net/contact-me/"
   @browser.navigate.to url
-
-  puts "WebDriver has been created"
+  # puts "WebDriver has been created"
 end
 
 When(/^I verify the Contact Me page loaded$/) do
@@ -22,25 +20,19 @@ And(/^I input my name "([^"]*)"$/) do |name|
 
 end
 
-
 Then(/^I input my email address "([^"]*)"$/) do |email|
   @browser.find_element(id: "email").send_keys(email)
-
 end
 
 And(/^I input my web site url "([^"]*)"$/) do |my_url|
   @browser.find_element(id: "url").send_keys(my_url)
-
 end
 
 Then(/^I check subscribe checkbox$/) do
   @browser.find_element(id: "subscribe_blog").click
-
 end
 
 And(/^I click on Post Comment button$/) do
-  button =  @browser.find_element(id: 'submit')
-  #button.click
 
  sleep 2
 end
@@ -60,7 +52,7 @@ Then(/^redirected to http:\/\/www\.practicalsqa\.net\/beginning\-selenium\-class
   actual_head=@browser.find_element(xpath:"//h1[@class='entry-title']").text
   expected_head = "Beginning Selenium Classes"
   raise "Actual is #{actual_head}, but expected: #{expected_head}" unless expected_head==actual_head
-  puts actual_head
+  # puts actual_head
 end
 
 Then(/^user is able to see list of twelve links for Lessons:$/) do |table|
@@ -76,5 +68,3 @@ Then(/^user is able to see list of twelve links for Lessons:$/) do |table|
     raise "Actual: #{actual}, but expected: #{expected}" unless actual==expected
   end
 end
-
-
