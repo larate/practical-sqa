@@ -1,0 +1,300 @@
+https://github.com/larate/practical-sqa/wiki
+http://www.data.portnov.com/larisa/
+The video is on Youtube  
+https://www.youtube.com/watch?v=xuB1Id2Wxak
+https://www.edureka.co/blog/install-git/
+Read  GitHub help 
+Bootcamp / Set Up Git 
+https://help.github.com/articles/set-up-git/
+
+First, you need to install Git on your machine https://git-scm.com
+Install Git On Windows
+Step 1: 
+To download the latest version of Git,
+Download Git for Windows  https://git-scm.com/download/win
+ Select Launch Git Bash and click on Finish.
+Step 2:
+Let us proceed with configuring Git with your username and email. In order to do that, type the following commands in your Git Bash:
+git config - - global user.name "<your name>"
+
+git config - - global user.email "<your email>"
+
+It is important to configure your Git because any commits that you make are associated with your configuration details.
+If you want to view all your configuration details, use the command below:
+
+git config --list
+Now to check the version of Git installed  we will use the command:
+git --version
+
+Step 3:
+git clone
+Create a folder on your Desktop "repos"
+C:\Users\Teacher\Desktop\repos>git clone https://github.com/larate/practical-sqa.git
+Cloning into 'practical-sqa'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+C:\Users\Teacher\Desktop\repos>ls
+practical-sqa
+
+C:\Users\Teacher\Desktop\repos>cd practical-sqa
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>ls
+README.md
+
+Step 4: 
+Add
+This command updates the index using the current content found in the working tree and then prepares the content in the staging area for the next commit.
+Thus, after making changes to the working tree, and before running the commit command, you must use the add command to add any new or modified files to the index. For that, use the commands below:
+git add <directory>
+or
+git add <file>
+or 
+git add .
+
+Step 5:
+C:\Users\Teacher\Desktop\repos\practical-sqa>git commit -m "updated readme file for better description"
+[master 26e459d] updated readme file for better description
+C:\Users\Teacher\Desktop\repos\practical-sqa>git log
+ git --help
+C:\Users\Teacher\Desktop\repos\practical-sqa>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/larate/practical-sqa.git
+
+Step 6:
+Do not push to the git without pull new changes from the origin 
+git pull origin master
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git log
+see the branch with git branch -r.
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+
+git fetch origin
+This will fetch all of the remote branches for you. You can see the branches available for checkout with:
+C:\Users\Teacher\Desktop\repos\practical-sqa>git fetch origin
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -v -a
+
+~/repos/practical-sqa --> git status
+
+Step 7:
+to create a new branch 
+>git branch test_feature
+
+git branch -v -a
+
+git checkout: means to switch to that branch
+ 
+git checkout test_feature
+ 
+With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+git branch first_branch origin/first_branch
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+ git checkout -b remote_branch origin/remote_branch
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -r
+  origin/HEAD -> origin/master
+  origin/first_branch
+  origin/master
+git checkout remote_branch
+
+Step 8:
+after all changes has been made you are ready push you changes to the GitHub
+
+git push origin first_branch
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
+* first_branch
+  master
+
+Step 9:
+
+On GitHub, navigate to the main page of the repository.	
+
+In the "Branch" menu, choose the branch that contains your commits.
+To the right of the Branch menu, click New pull request.
+
+Use the base branch dropdown menu to select the branch you'd like to merge your changes into,
+then use the compare branch drop-down menu to choose the topic branch you made your changes in.
+Type a title and description for your pull request. 
+ Click Create pull request
+After your pull request has been reviewed, it can be merged into the repository.
+
+
+<https://help.github.com/articles/creating-a-pull-request/> 
+
+
+------------------------------------------------------------------------------------
+
+Merging
+
+Merging is the way to combine the work of different branches together. This will allow us to branch off, develop a new feature, and then combine it back in.
+git merge <branch_name>
+Merge all of the commits into the base branch by clicking Merge pull request. If the Merge pull request option is not shown, then click the merge drop down menu and select Create a merge commit.
+It is important to know that the branch name in the above command should be the branch you want to merge into the branch you are currently checking out. So, make sure that you are checked out in the destination branch.
+Common workflow 
+----------------------------------------------------------------------
+Git branch my_feature
+Git checkout my_feature
+Git branch -a 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
+* first_branch
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/first_branch
+  remotes/origin/master
+
+Git add
+Git commit -m ""
+Git push -u origin my_feature
+Git branch -a 
+
+	1. First we are  switching to a master brunch  
+Git checkout master
+	2. We are pulling master from remote 
+
+Deleting a branch 
+// locally ((if you know what you are doing!) git branch -d localBranchName // and then if you need to... // on remote
+ git pus origin :remoteBranchNameit pull origin master  
+	3. We are merging our feature
+	4. git branch --merged 
+	C:\Users\Teacher\Desktop\repos\practical-sqa>git branch --merged
+	* first_branch
+	  master
+	
+	5. Git merge my_feature
+	6. Git push origin master
+	7. Git branch -d my_feature 
+	8. Git branch -a 
+	9. Git push origin --delete my_feature
+	10. Git branch -a
+------------------------------------------------------------------------
+1. to list all files
+ 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git ls-files
+README.md
+artem_test.txt
+file
+new_m.txt
+practicalsqa_bugs.txt
+testfile.txt
+text.txt
+2. to see all remote branchs 
+C:\Users\Teacher\Desktop\repos\practical-sqa>git branch -a
+* larisa_deleting_files
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Nikolay
+  remotes/origin/artem_test
+  remotes/origin/drozhzhi
+  remotes/origin/master
+  remotes/origin/revert-16-drozhzhi
+  remotes/origin/revert-17-revert-16-drozhzhi
+  remotes/origin/sergey_test
+  remotes/origin/vlad_test_2
+
+
+3. to see all remote branches and files
+C:\Users\Teacher\Desktop\repos\practical-sqa>git ls-tree --full-tree -r HEAD
+
+100644 blob 046e58c96c904e72549fd8d2e95b01ffef540a7b    README.md
+100644 blob 9c8b35a089779b34a67b5093d8cdba7a7f250fca    artem_test.txt
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    file
+100644 blob cee50c8fcc68312571434d3a3bf98352ea8f52b0    new_m.txt
+100644 blob d1e32ecf272fcaa476026c4fd759e0522c0b0ca2    practicalsqa_bugs.txt
+100644 blob 53a5e0ddf9a85d3020a3d57dcac8c6c9ec5b5e0a    testfile.txt
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    text.txt
+
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git pull origin master
+From https://github.com/larate/practical-sqa
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\Teacher\Desktop\repos\practical-sqa>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\Teacher\Desktop\repos\practical-sqa> git checkout -b larisa_new_doc_branch
+Switched to a new branch 'larisa_new_doc_branch
+ To delete files from  git 	 
+Use git rm:
+git rm file1.txt
+git commit -m "remove file1.txt"
+But if you want to remove the file only from the Git repository and not remove it from the filesystem, use: 
+git rm --cached file1.txt
+git commit -m "remove file1.txt"
+And to push changes to remote repo
+git push origin branch_name  
+
+
+Commit your code
+As I am creating changes in my project, these are all unseated updates. With each commit there most likely will be additions, and there will also be deletions from time to time. To get a baring of the updates I have made, lets get the status.
+$ git status
+This command will give you a list of all the updated, added and deleted files.
+To add files, I can add them individually or I can add all at once. From the root of the project I can use:
+$ git add .
+In order to remove deleted files from the version control, I can again either remove individually or from the root address them all like so:
+$ git add -u
+I'm lazy, I don't want to think, so the following command I make heavy use of to address all additions and deletions.
+$ git add --all
+All the preceding commands will stage the updates for commitment. If I run a git status at this point, I will see my updates presented differently, typically under the heading of Changes to be committed:. At this point, the changes are only staged and not yet committed to the branch. To commit, do the following:
+$ git commit -m "a commit message in the present tense"
+It is considered best to illustrate your comment in the tense that this will do something to the code. It didn't do something in the past and it won't do something in the future. The commit is doing something now.
+A bad example would be:
+$ git commit -m "fixed bug with login feature"
+A good example would be:
+$ git commit -m "update app config to address login bug
+Push your branch
+When working with feature branches on a team, it is typically not appropriate to merge your own code into master. Although this is up to your team as how to manage these expectations, but the norm is to make use of pull requests. Pull requests require that you push your branch to the remote repo.
+To push the new feature branch to the remote repo, simply do the following:
+$ git push origin my-new-feature-brach
+As far as Git is concerned, there is no real difference between master and a feature branch. So, all the same Git features apply.
+My branch was rejected?
+This is a special case when working on a team and the branch I am are pushing is out of sync with the remote. To address this, it's simple, pull the latest changes:
+$ git pull origin my-new-feature-branch
+This will fetch and merge any changes on the remote repo into my local brach with the changes, thus now allowing you to push.
+
+
+Working on remote feature branches
+Tracking remote branches
+My local .git/ directory will of course manage all my local branches, but my local repo is not always aware of any remote branches. To see what knowledge my local branch has of the remote branch index, adding the -r flag to git branch will return a list.
+$ git branch -r
+To keep my local repo 100% in sync with deleted remote branches, I make use of this command:
+$ git fetch -p
+The -p or --prune flag, after fetching, will remove any remote-tracking branches which no longer exist.
+Switching to a new remote feature branch
+Doing a git pull or git fetch will update my local repo's index of remote branches. As long as co-workers have pushed their branch, my local repo will have knowledge of that feature branch. By doing a git branch you will see a list of my local branches. By doing a git branch -r I will see a list of remote branches. There is a good chance that the new feature branch is not in my list of local branches.
+The process of making this remote branch a local branch to work on is easy, simply checkout the branch.
+
+To remove the file from the index, use:
+git reset myfile
+git add -u myfile
+
+
+
