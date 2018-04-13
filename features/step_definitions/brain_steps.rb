@@ -1,5 +1,5 @@
 Given("I navigate to brainteasers page") do
-  url= "http://www.practicalsqa.net/xpath-brainteasers-and-exercises/"
+  url= "http://www.old.practicalsqa.net/xpath-brainteasers-and-exercises/"
   @browser.navigate.to url
 end
 

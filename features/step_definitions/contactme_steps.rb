@@ -1,7 +1,7 @@
 
 
 Given(/^I navigate to Contact Me page$/) do
-  url = "http://www.practicalsqa.net/contact-me/"
+  url = "http://www.old.practicalsqa.net/contact-me/"
   @browser.navigate.to url
 
   puts "WebDriver has been created"

@@ -4,7 +4,7 @@ Given(/^User on the Practicalsqa Home page$/) do
   # @browser.get "http://www.practicalsqa.net/"
   # url = "http://www.practicalsqa.net/"
   # @browser.get url
-   base_url = "http://www.practicalsqa.net/"
+   base_url = "http://www.old.practicalsqa.net/"
   @browser.navigate.to base_url
 end
 
