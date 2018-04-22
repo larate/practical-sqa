@@ -1,10 +1,10 @@
 Given("I navigate to brainteasers page") do
-  url= "http://www.old.practicalsqa.net/xpath-brainteasers-and-exercises/"
-  @browser.navigate.to url
+  @brain_page.visit
+
 end
 
 Given("I verify the brainteasers page loaded") do
-@browser.find_element(xpath: "//li/a[text()='Nested Selectors']")
+@brain_page.page_loaded
 end
 
 

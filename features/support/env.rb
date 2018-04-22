@@ -1,5 +1,6 @@
 require "selenium-webdriver"
 require "rspec"
+require_relative "../pages/brain_page.rb"
 driver_path =  File.join(File.dirname(__FILE__), "..", "..", "drivers","chromedriver.exe")
 # driver_path = "C:\Users\student\Desktop\repos\practical-sqa\drivers\chromedriver.exe"
 puts  driver_path
@@ -16,6 +17,7 @@ my_password  = "larissa12"
    @browser.find_element(xpath: "//input[@id='user_login']").send_keys my_usernam
    @browser.find_element(xpath: "//input[@id='user_pass']").send_keys my_password
    @browser.find_element(xpath: "//input[@id='wp-submit']").click
+   @brain_page = BrainPage.new @browser
 #   $base_url = "practicalsqa.net"
 #   @browser.get "http://www.#{$base_url}"
 
