@@ -3,8 +3,8 @@ require "rspec"
 driver_path =  File.join(File.dirname(__FILE__), "..", "..", "drivers","chromedriver.exe")
 # driver_path = "C:\Users\student\Desktop\repos\practical-sqa\drivers\chromedriver.exe"
 puts  driver_path
-my_usernam = "larissa"
-my_password  = "larissa12"
+my_usernam = "admin"
+my_password  = "admin"
 
 
  Before do
