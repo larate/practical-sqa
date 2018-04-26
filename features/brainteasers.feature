@@ -9,8 +9,8 @@ Feature: Brainteasers testing
     Examples:
       | title            | text_p                                   |
       | Nested Selectors | Beginning Brainteaser — Nested Selectors |
-      |Beginning Conditionals| Beginning Brainteaser — Conditionals |
-      |Beginning Conditionals #2|Beginning Brainteaser — Conditionals p. 2 |
-      |Beginning Conditionals #3  | Beginning Brainteaser — Conditionals p. 3 |
-      |Find number of patients| Beginning brainteaser – Find number of patients admitted to Good Health Clinic |
-
+#      |Beginning Conditionals| Beginning Brainteaser — Conditionals |
+#      |Beginning Conditionals #2|Beginning Brainteaser — Conditionals p. 2 |
+#      |Beginning Conditionals #3  | Beginning Brainteaser — Conditionals p. 3 |
+#      |Find number of patients| Beginning brainteaser – Find number of patients admitted to Good Health Clinic |
+#
