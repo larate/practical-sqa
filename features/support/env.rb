@@ -5,6 +5,7 @@ driver_path =  File.join(File.dirname(__FILE__), "..", "..", "drivers","chromedr
 puts  driver_path
 my_usernam = "admin"
 my_password  = "admin"
+require_relative "../pages/page_actions.rb"
 
 
  Before do
@@ -16,6 +17,9 @@ my_password  = "admin"
    @browser.find_element(xpath: "//input[@id='user_login']").send_keys my_usernam
    @browser.find_element(xpath: "//input[@id='user_pass']").send_keys my_password
    @browser.find_element(xpath: "//input[@id='wp-submit']").click
+   @brain_page =BrainPage.new @browser
+   @contactme_page = ContactMe.new @browser
+
 #   $base_url = "practicalsqa.net"
 #   @browser.get "http://www.#{$base_url}"
 

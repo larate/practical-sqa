@@ -1,47 +1,22 @@
 
 
 Given(/^I navigate to Contact Me page$/) do
-  url = "http://www.old.practicalsqa.net/contact-me/"
-  @browser.navigate.to url
-
+  @contactme_page.visit
   puts "WebDriver has been created"
 end
 
 When(/^I verify the Contact Me page loaded$/) do
-  @browser.find_element({xpath: "//h1[@class = 'entry-title' and text() = 'Contact Me']"})
+ @contactme_page.page_loaded
 end
 
 Then(/^I write my comment "([^"]*)"$/) do |comment|
-   @browser.find_element(id: "comment").send_keys comment
-  # puts "#{comment}"
-end
-
-And(/^I input my name "([^"]*)"$/) do |name|
-  @browser.find_element(id: "author").send_keys(name)
-
-
+  @contactme_page.write_comment(comment)
 end
 
 
-Then(/^I input my email address "([^"]*)"$/) do |email|
-  @browser.find_element(id: "email").send_keys(email)
-
-end
-
-And(/^I input my web site url "([^"]*)"$/) do |my_url|
-  @browser.find_element(id: "url").send_keys(my_url)
-
-end
-
-Then(/^I check subscribe checkbox$/) do
-  @browser.find_element(id: "subscribe_blog").click
-
-end
 
 And(/^I click on Post Comment button$/) do
-  button =  @browser.find_element(id: 'submit')
-  #button.click
-
+  @contactme_page.click_button
  sleep 2
 end
 
