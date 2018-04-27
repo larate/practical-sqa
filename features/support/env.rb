@@ -7,6 +7,7 @@ my_usernam = "admin"
 my_password  = "admin"
 require_relative "../pages/page_actions.rb"
 
+require_relative "../pages/page_actions.rb"
 
  Before do
    @browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
@@ -17,9 +18,14 @@ require_relative "../pages/page_actions.rb"
    @browser.find_element(xpath: "//input[@id='user_login']").send_keys my_usernam
    @browser.find_element(xpath: "//input[@id='user_pass']").send_keys my_password
    @browser.find_element(xpath: "//input[@id='wp-submit']").click
+<<<<<<< HEAD
    @brain_page =BrainPage.new @browser
    @contactme_page = ContactMe.new @browser
 
+=======
+
+   @brain_page = BrainPage.new @browser
+>>>>>>> b8c01c2b11b61e60ce0fc010333f6077fab3bd1d
 #   $base_url = "practicalsqa.net"
 #   @browser.get "http://www.#{$base_url}"
 
