@@ -1,7 +1,7 @@
 Tasks:
 Test git add
-Dfsfsfsfs df
-Sdfsdff
+Git status check
+
 1. Inventory of courses and pages and webinars
 2. One page summary to be given to new students
 3. Test Design
